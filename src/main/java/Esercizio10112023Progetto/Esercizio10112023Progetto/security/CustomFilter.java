@@ -39,7 +39,11 @@ public class CustomFilter extends OncePerRequestFilter {
         }
 
     }
-    protected boolean shoulNotFilter(HttpServletRequest request){
+
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
         return new AntPathMatcher().match("/auth/**",request.getServletPath());
     }
+
+
 }
