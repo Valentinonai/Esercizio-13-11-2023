@@ -23,6 +23,8 @@ public class User {
     private String cognome;
     @Column(name = "email",nullable = false)
     private String email;
+    @Column(name="password",nullable = false)
+    private String password;
     @Column(name = "username")
     private String username;
     @Column(name = "immagine")

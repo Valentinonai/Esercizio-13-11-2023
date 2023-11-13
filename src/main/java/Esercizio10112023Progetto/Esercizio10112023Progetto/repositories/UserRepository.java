@@ -14,4 +14,6 @@ public interface UserRepository extends JpaRepository<User,Integer> {
 
     @Query(value = "select u.listaDispositivi from User u where u.id=:id")
     Optional<List<Dispositivo>> findDispositiviById(int id);
+
+    Optional<User> findByEmail(String email);
 }
