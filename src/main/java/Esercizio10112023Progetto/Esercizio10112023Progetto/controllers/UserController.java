@@ -33,14 +33,7 @@ public class UserController {
     public User getSingleUser(@PathVariable int id){
         return userService.getSingleUser(id);
     }
-    @PostMapping()
-    @ResponseStatus(HttpStatus.CREATED)
-    public User createUser(@RequestBody @Validated UserPayload userPayload, BindingResult validation){
-        if(validation.hasErrors()){
-            throw new BadRequest(validation.getAllErrors());
-        }
-        return userService.createUser(userPayload);
-    }
+
     @PutMapping("/{id}")
     public User modifyUser(@RequestBody @Validated UserPayload userPayload,BindingResult validation,@PathVariable int id){
         if(validation.hasErrors()){
