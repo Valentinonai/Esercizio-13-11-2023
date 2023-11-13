@@ -1,13 +1,13 @@
-package Esercizio13112023.Esercizio13112023;
+package Esercizio10112023Progetto.Esercizio10112023Progetto;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Esercizio13112023Application {
+public class Esercizio10112023ProgettoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Esercizio13112023Application.class, args);
+		SpringApplication.run(Esercizio10112023ProgettoApplication.class, args);
 	}
 
 }
